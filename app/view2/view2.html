@@ -1,0 +1,23 @@
+<div>
+	Orders
+</div>
+<table class="table table-bordered  table-striped  table-hover table-responsive tw-font-90">
+	<thead>
+		<tr class="hidden-xs">
+			<th>S. No.</th>
+			<th>Name</th>
+			<th>Coffee</th>
+			<th>Size</th>
+			<th>Price</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="ithOrder in gvOrderList">
+			<td>{{$index + 1}}</td>
+			<td>{{ithOrder.user}}</td>
+			<td>{{ithOrder.drink}}</td>
+			<td>{{ithOrder.size}}</td>
+			<td>{{ithOrder.amount}} eur</td>
+		</tr>
+	</tbody>
+</table>
