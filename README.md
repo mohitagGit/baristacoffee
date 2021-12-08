@@ -9,9 +9,9 @@ To get you started you can simply clone the `baristacoffee` repository and insta
 
 ### Prerequisites
 
-You need git to clone the `baristacoffee` repository. You can get git from [here][git].
+You need git to clone the `baristacoffee` repository.
 
-We also use a number of Node.js tools to initialize and test `angular-seed`. You must have Node.js
+We also use a number of Node.js tools to initialize and test `baristacoffee`. You must have Node.js
 and its package manager (npm) installed. You can get them from [here][node].
 
 ### Clone `baristacoffee`
