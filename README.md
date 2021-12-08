@@ -89,7 +89,7 @@ predefined script to do this:
 ```
 npm run test-single-run
 ```
-
+![alt text](https://github.com/mohitagarwal2599/baristacoffee/blob/main/app/index.html?raw=true)
 
 <a name="e2e-testing"></a>
 ### Running End-to-End Tests
