@@ -91,16 +91,27 @@ npm run test-single-run
 ```
 ### Flow of application
 
+### 1.Price list of coffees
 ![alt text](https://github.com/mohitagarwal2599/baristacoffee/blob/main/app/img/bc-prices.png?raw=true)
 
+
+### 2.User list with total payment, total amount and balance
 ![alt text](https://github.com/mohitagarwal2599/baristacoffee/blob/main/app/img/bc-users.png?raw=true)
 
+
+### 3.Order list with user name, coffee name, size and price
 ![alt text](https://github.com/mohitagarwal2599/baristacoffee/blob/main/app/img/bc-all-orders.png?raw=true)
 
+
+### 4.Order list of single user having coffee name, size and price
 ![alt text](https://github.com/mohitagarwal2599/baristacoffee/blob/main/app/img/bc-single-customer-order.png?raw=true)
 
+
+### 5.Payment list of all user having user name and payment amount
 ![alt text](https://github.com/mohitagarwal2599/baristacoffee/blob/main/app/img/bc-all-payments.png?raw=true)
 
+
+### 6.Payment list of single user having user name and payment amount
 ![alt text](https://github.com/mohitagarwal2599/baristacoffee/blob/main/app/img/bc-single-user-payents.png?raw=true)
 
 
