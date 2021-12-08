@@ -1,0 +1,24 @@
+<h3>
+	<span><a href="#/orders">All Orders</a></span>
+	<span ng-if="svUrlParams.user"><a href="#/orders?user={{svUrlParams.user}}"> > {{svUrlParams.user}}'s Order</a></span>
+</h3>
+<table class="table table-bordered  table-striped  table-hover table-responsive tw-font-90">
+	<thead>
+		<tr class="hidden-xs">
+			<th>S. No.</th>
+			<th ng-if="!svUrlParams.user">User Name</th>
+			<th>Coffee Type</th>
+			<th>Coffee Size</th>
+			<th>Price({{gvCurrency}})</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="ithOrder in svAllOrders">
+			<td>{{$index + 1}}</td>
+			<td ng-if="!svUrlParams.user"><a href="#/orders?user={{ithOrder.user}}">{{ithOrder.user}}</a></td>
+			<td>{{ithOrder.drink}}</td>
+			<td>{{ithOrder.size}}</td>
+			<td>{{ithOrder.price}}</td>
+		</tr>
+	</tbody>
+</table>

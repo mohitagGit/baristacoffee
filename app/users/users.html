@@ -1,0 +1,25 @@
+<h3><u>Users List</u></h3>
+<table class="table table-bordered  table-striped  table-hover table-responsive tw-font-90">
+	<thead>
+		<tr class="hidden-xs">
+			<th>S. No.</th>
+			<th>Name</th>
+			<th>Total Orders</th>
+			<th>Total Amount({{gvCurrency}})</th>
+			<th>Total Paid({{gvCurrency}})</th>
+			<th>Balance({{gvCurrency}})</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="ithUser in svAllUsers">
+			<td>{{$index + 1}}</td>
+			<td>{{ithUser.user}}</td>
+			<td><a href="#/orders?user={{ithUser.user}}">{{ithUser.orders.length}}</a></td>
+			<td>{{ithUser.total_amount}}</td>
+			<td><a href="#/payments?user={{ithUser.user}}">{{ithUser.total_paid}}</a></td>
+			<td ng-if="ithUser.payment_due > 0"><span style="color:green;">+{{ithUser.payment_due}}</span></td>
+			<td ng-if="ithUser.payment_due == 0"><span style="color:orange;">{{ithUser.payment_due}}</span></td>
+			<td ng-if="ithUser.payment_due < 0"><span style="color:red;">{{ithUser.payment_due}}</span></td>
+		</tr>
+	</tbody>
+</table>

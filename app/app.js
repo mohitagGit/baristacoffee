@@ -2,12 +2,15 @@
 // Declare app level module which depends on views, and core components
 angular.module('myApp', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
+  'myApp.coffees',
+  'myApp.users',
+  'myApp.orders',
+  'myApp.payments',
   'myApp.version'
 ])
 .run(function($rootScope,$window,$route){
 
+	$rootScope.gvCurrency = "eur";
 	$rootScope.gvCoffeePriceList = [
 	   {
 		  "drink_name":"short espresso",
@@ -661,10 +664,10 @@ angular.module('myApp', [
 	$rootScope.gvCoffeePriceList.forEach(function(ithCoffee){
 		var lvCoffeeVariants = [];
 		$rootScope.gvOrderList.forEach(function(ithOrder){
-			if(ithOrder.drink = ithCoffee.drink_name){
+			if(ithOrder.drink == ithCoffee.drink_name){
 				ithCoffee.variants.forEach(function(iVariant){
 					if(iVariant.size == ithOrder.size){
-						ithOrder.amount = iVariant.price;
+						ithOrder.price = parseFloat(iVariant.price).toFixed(2);
 					}
 				});
 			}
@@ -678,27 +681,27 @@ angular.module('myApp', [
 		if(lvThisUser.length){
 			$rootScope.gvUserOrderList.forEach(function(iThUser){
 				if(iThUser.user == ithOrder.user){
-					iThUser.orders.push({"size": ithOrder.size, "drink": ithOrder.drink, "price": ithOrder.amount});
+					iThUser.total_amount = (parseFloat(iThUser.total_amount) + parseFloat(ithOrder.price)).toFixed(2);
+					iThUser.orders.push({"size": ithOrder.size, "drink": ithOrder.drink, "price": ithOrder.price});
 				}
 			});
 		}
 		else{
 			var lv_data = {
 				"user": ithOrder.user,
-				"orders":[
-					{"size": ithOrder.size, "drink": ithOrder.drink, "price": ithOrder.amount}
-				]
+				"orders":[{"size": ithOrder.size, "drink": ithOrder.drink, "price": ithOrder.price}],
+				"total_amount": (parseFloat(ithOrder.price)).toFixed(2)
 			}
 			$rootScope.gvUserOrderList.push(lv_data);
 		}
 	});
 
 	// to get user all payment of unique user
-	$rootScope.gvUserPyaments = [];
+	$rootScope.gvUserOrderPayments = [];
 	$rootScope.gvPayments.forEach(function(ithPayment){
-		var lvThisUser = $rootScope.gvUserPyaments.filter(function(iUser){return iUser.user == ithPayment.user});
+		var lvThisUser = $rootScope.gvUserOrderPayments.filter(function(iUser){return iUser.user == ithPayment.user});
 		if(lvThisUser.length){
-			$rootScope.gvUserPyaments.forEach(function(iThUser){
+			$rootScope.gvUserOrderPayments.forEach(function(iThUser){
 				if(iThUser.user == ithPayment.user){
 					iThUser.total_paid = (parseFloat(iThUser.total_paid) + parseFloat(ithPayment.amount)).toFixed(2);
 					iThUser.payments.push(ithPayment.amount);
@@ -709,26 +712,27 @@ angular.module('myApp', [
 			var lv_data = {
 				"user": ithPayment.user,
 				"payments":[ithPayment.amount],
-				"total_paid": parseFloat(ithPayment.amount)
+				"total_paid": parseFloat(ithPayment.amount).toFixed(2)
 			}
-			$rootScope.gvUserPyaments.push(lv_data);
+			$rootScope.gvUserOrderPayments.push(lv_data);
 		}
 	});
 
 	// to get complete user order and payment data
 	$rootScope.gvUserOrderList.forEach(function(ithUserOrder){
-		$rootScope.gvUserPyaments.forEach(function(ithUserPayment){
+		$rootScope.gvUserOrderPayments.forEach(function(ithUserPayment){
 			if(ithUserOrder.user == ithUserPayment.user){
 				ithUserPayment.orders = ithUserOrder.orders;
+				ithUserPayment.total_amount = ithUserOrder.total_amount;
+				ithUserPayment.payment_due = (parseFloat(ithUserPayment.total_paid) - parseFloat(ithUserOrder.total_amount)).toFixed(2);
 			}
 		});
 	});
-
-	$rootScope.gvUserOrderPayments = [];
+	console.log(JSON.stringify($rootScope.gvUserOrderPayments));
 })
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	
   $locationProvider.hashPrefix('');
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.otherwise({redirectTo: '/coffees'});
 }]);
