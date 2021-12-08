@@ -12,7 +12,7 @@ To get you started you can simply clone the `baristacoffee` repository and insta
 You need git to clone the `baristacoffee` repository.
 
 We also use a number of Node.js tools to initialize and test `baristacoffee`. You must have Node.js
-and its package manager (npm) installed. You can get them from [here][node].
+and its package manager (npm) installed.
 
 ### Clone `baristacoffee`
 
@@ -30,7 +30,7 @@ help us manage and test the application.
 
 * We get the tools we depend upon and the AngularJS code via `npm`, the [Node package manager][npm].
 
-We have preconfigured `npm` to automatically copy the downloaded AngularJS files to `app/lib` so we
+Preconfigured `npm` to automatically copy the downloaded AngularJS files to `app/lib` so we
 can simply do:
 
 ```
@@ -40,13 +40,10 @@ npm install
 * `node_modules` - contains the npm packages for the tools we need
 * `app/lib` - contains the AngularJS framework files and other front end dependencies
 
-*Note copying the AngularJS files from `node_modules` to `app/lib` makes it easier to serve the
-files by a web server.*
 
 ### Run the Application
 
-We have preconfigured the project with a simple development web server. The simplest way to start
-this server is:
+To run the application enter the below command on terminal or CLI:
 
 ```
 npm start
@@ -55,7 +52,7 @@ npm start
 Now browse to the app at [`localhost:8000/index.html`][local-app-url].
 
 
-### Flow of application
+### Screenshots of flow of application
 
 ### 1.Price list of coffees
 ![alt text](https://github.com/mohitagarwal2599/baristacoffee/blob/main/app/img/bc-prices.png?raw=true)
