@@ -64,7 +64,7 @@ Now browse to the app at [`localhost:8000/index.html`][local-app-url].
 ![alt text](https://github.com/mohitagarwal2599/baristacoffee/blob/main/app/img/bc-all-orders.png?raw=true)
 
 
-### 4.Order list of single user having coffee name, size and price
+### 4.Orders of single user having coffee name, size and price
 ![alt text](https://github.com/mohitagarwal2599/baristacoffee/blob/main/app/img/bc-single-customer-order.png?raw=true)
 
 
@@ -72,7 +72,7 @@ Now browse to the app at [`localhost:8000/index.html`][local-app-url].
 ![alt text](https://github.com/mohitagarwal2599/baristacoffee/blob/main/app/img/bc-all-payments.png?raw=true)
 
 
-### 6.Payment list of single user having user name and payment amount
+### 6.Payments of single user having user name and payment amount
 ![alt text](https://github.com/mohitagarwal2599/baristacoffee/blob/main/app/img/bc-single-user-payents.png?raw=true)
 
 
