@@ -11,6 +11,7 @@ angular.module('myApp', [
 .run(function($rootScope,$window,$route){
 
 	$rootScope.gvCurrency = "eur";
+	// https://jsonkeeper.com/b/URJI
 	$rootScope.gvCoffeePriceList = [
 	   {
 		  "drink_name":"short espresso",
@@ -60,6 +61,7 @@ angular.module('myApp', [
 	   }
 	];
 
+	// https://jsonkeeper.com/b/13EU
 	$rootScope.gvOrderList = [
 	   {
 		  "user":"coach",
@@ -561,8 +563,9 @@ angular.module('myApp', [
 		  "drink":"supermochacrapucaramelcream",
 		  "size":"huge"
 	   }
-	]
+	];
 
+	// https://jsonkeeper.com/b/CG17
 	$rootScope.gvPayments = [
 	   {
 		  "user":"coach",
