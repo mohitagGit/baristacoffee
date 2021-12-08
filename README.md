@@ -1,4 +1,4 @@
-# `baristacoffee` — Prices, customers, payments and orders with routes
+# `baristacoffee` — Prices, customers, payments and orders
 
 The baristacoffee is simple [AngularJS][angularjs] application using Bootstrap and little jQuery
 The baristacoffee app uses routes to define 4 states(price,payments,orders,customers) having controllers and views together.
