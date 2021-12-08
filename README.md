@@ -2,6 +2,7 @@
 
 The baristacoffee is single page AngularJS application using Bootstrap and a bit of jQuery.
 The baristacoffee app have 4 states(coffees,payments,orders and customers) having controllers and views together.
+Initial provided data of prices, order and payments in local JSON.
 
 ## Getting Started
 
