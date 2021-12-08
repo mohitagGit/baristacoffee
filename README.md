@@ -25,7 +25,7 @@ cd baristacoffee
 
 ### Install Dependencies
 
-* We get the tools we depend upon and the AngularJS code via `npm`, the [Node package manager][npm].
+* We get the tools we depend upon and the AngularJS code via `npm`.
 
 Preconfigured `npm` to automatically copy the downloaded AngularJS files to `app/lib` so we
 can simply do:
