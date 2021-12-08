@@ -1,7 +1,7 @@
 # `baristacoffee` — Prices, customers, payments and orders
 
-The baristacoffee is simple AngularJS application using Bootstrap and a bit of jQuery.
-The baristacoffee app uses routes to define 4 states(prices,payments,orders and customers) having controllers and views together.
+The baristacoffee is single page AngularJS application using Bootstrap and a bit of jQuery.
+The baristacoffee app have 4 states(coffees,payments,orders and customers) having controllers and views together.
 
 ## Getting Started
 
@@ -24,9 +24,6 @@ cd baristacoffee
 ```
 
 ### Install Dependencies
-
-We have two kinds of dependencies in this project: tools and AngularJS framework code. The tools
-help us manage and test the application.
 
 * We get the tools we depend upon and the AngularJS code via `npm`, the [Node package manager][npm].
 
