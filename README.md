@@ -19,17 +19,9 @@ and its package manager (npm) installed. You can get them from [here][node].
 Clone the `baristacoffee` repository using git:
 
 ```
-git clone https://github.com/angular/angular-seed.git
-cd angular-seed
+git clone https://github.com/mohitagarwal2599/baristacoffee.git
+cd baristacoffee
 ```
-
-If you just want to start a new project without the `angular-seed` commit history then you can do:
-
-```
-git clone --depth=1 https://github.com/angular/angular-seed.git <your-project-name>
-```
-
-The `depth=1` tells git to only pull down one commit worth of historical data.
 
 ### Install Dependencies
 
@@ -48,10 +40,6 @@ can simply do:
 npm install
 ```
 
-Behind the scenes this will also call `npm run copy-libs`, which copies the AngularJS files and
-other front end dependencies. After that, you should find out that you have two new directories in
-your project.
-
 * `node_modules` - contains the npm packages for the tools we need
 * `app/lib` - contains the AngularJS framework files and other front end dependencies
 
@@ -68,40 +56,6 @@ npm start
 ```
 
 Now browse to the app at [`localhost:8000/index.html`][local-app-url].
-
-
-## Directory Layout
-
-```
-app/                  --> all of the source files for the application
-  app.css               --> default stylesheet
-  core/                 --> all app specific modules
-    version/              --> version related components
-      version.js                 --> version module declaration and basic "version" value service
-      version_test.js            --> "version" value service tests
-      version-directive.js       --> custom directive that returns the current app version
-      version-directive_test.js  --> version directive tests
-      interpolate-filter.js      --> custom interpolation filter
-      interpolate-filter_test.js --> interpolate filter tests
-  view1/                --> the view1 view template and logic
-    view1.html            --> the partial template
-    view1.js              --> the controller logic
-    view1_test.js         --> tests of the controller
-  view2/                --> the view2 view template and logic
-    view2.html            --> the partial template
-    view2.js              --> the controller logic
-    view2_test.js         --> tests of the controller
-  app.js                --> main application module
-  index.html            --> app layout file (the main html template file of the app)
-  index-async.html      --> just like index.html, but loads js files asynchronously
-e2e-tests/            --> end-to-end tests
-  protractor-conf.js    --> Protractor config file
-  scenarios.js          --> end-to-end scenarios to be run by Protractor
-karma.conf.js         --> config file for running unit tests with Karma
-package.json          --> Node.js specific metadata, including development tools dependencies
-package-lock.json     --> Npm specific metadata, including versions of installed development tools dependencies
-```
-
 
 ## Testing
 
@@ -200,21 +154,6 @@ If you want to update a dependency to a version newer than what the specificed r
 you can change the version range in `package.json` and then run `npm run update-deps` as usual.
 
 
-## Loading AngularJS Asynchronously
-
-The `angular-seed` project supports loading the framework and application scripts asynchronously.
-The special `index-async.html` is designed to support this style of loading. For it to work you must
-inject a piece of AngularJS JavaScript into the HTML page. The project has a predefined script to help
-do this:
-
-```
-npm run update-index-async
-```
-
-This will copy the contents of the `angular-loader.js` library file into the `index-async.html`
-page. You can run this every time you update the version of AngularJS that you are using.
-
-
 ## Serving the Application Files
 
 While AngularJS is client-side-only technology and it is possible to create AngularJS web apps that
@@ -255,37 +194,3 @@ If your AngularJS app is talking to the backend server via XHR or other means, y
 out what is the best way to host the static files to comply with the same origin policy if
 applicable. Usually this is done by hosting the files by the backend server or through
 reverse-proxying the backend server(s) and web server(s).
-
-
-## Continuous Integration
-
-### Travis CI
-
-[Travis CI][travis] is a continuous integration service, which can monitor GitHub for new commits to
-your repository and execute scripts such as building the app or running tests. The `angular-seed`
-project contains a Travis configuration file, `.travis.yml`, which will cause Travis to run your
-tests when you push to GitHub.
-
-You will need to enable the integration between Travis and GitHub. See the
-[Travis website][travis-docs] for instructions on how to do this.
-
-
-## Contact
-
-For more information on AngularJS please check out [angularjs.org][angularjs].
-
-
-[angularjs]: https://angularjs.org/
-[git]: https://git-scm.com/
-[http-server]: https://github.com/indexzero/http-server
-[jasmine]: https://jasmine.github.io/
-[jdk]: https://wikipedia.org/wiki/Java_Development_Kit
-[jdk-download]: http://www.oracle.com/technetwork/java/javase/downloads
-[karma]: https://karma-runner.github.io/
-[local-app-url]: http://localhost:8000/index.html
-[node]: https://nodejs.org/
-[npm]: https://www.npmjs.org/
-[protractor]: http://www.protractortest.org/
-[selenium]: http://docs.seleniumhq.org/
-[travis]: https://travis-ci.org/
-[travis-docs]: https://docs.travis-ci.com/user/getting-started
