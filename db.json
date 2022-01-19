@@ -1,0 +1,34 @@
+{
+    "iata-codes": [
+        {
+            "id": 1,
+            "IATA": "FCO",
+            "country": "Italy",
+            "airport": "Fuimicino"
+        },
+        {
+            "id": 2,
+            "IATA": "TLS",
+            "country": "France",
+            "airport": "Blagnac"
+        },
+        {
+            "id": 3,
+            "IATA": "LHR",
+            "country": "United Kingdom",
+            "airport": "Heathrow"
+        },
+        {
+            "id": 4,
+            "IATA": "CDG",
+            "country": "France",
+            "airport": "Charles de Gaulle"
+        },
+        {
+            "id": 5,
+            "IATA": "AMS",
+            "country": "Netherlands",
+            "airport": "Schiphol Airport"
+        }
+    ]
+}
